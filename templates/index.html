@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Corrigindo o caminho para o arquivo CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Quitanda Online</title>
+</head>
+<body>
+    <!-- Corrigindo o caminho para a imagem -->
+    <img src="{{ url_for('static', filename='img/slides/slide01.jpg') }}" alt="Slide 1">
+</body>
+</html>
+
+    <div class="d-flex flex-column wrapper">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger border-bottom shadow-sm mb-3">
+            <div class="container d-flex flex-column">
+            <a class="navbar-brand" href="/">Quitanda Online</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                <span class="navbar-toggler-icon"></span>
+        </button>                      
+                <div class="collapse navbar-collapse d-flex flex-column align-items-start">
+                    <ul class="navbar-nav flex-grow-1">                        
+                        <li class="nav-item">
+                        <a href="/login.html" class="nav-link text-white">Entrar</a>                                               
+                        </li>
+                    </ul>
+                    <div class="align-self-end">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="/cadastro.html" class="nav-link text-white">Quero me Cadastrar</a>                                
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/contato.html">Contato</a>
+                            </li>
+                            <li class="nav-item">
+                                <span class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0" title="5 produto(s) no carrinho"><small>5</small></span>
+                                <a href="/carrinho.html" class="nav-link text-white"><i class="bi bi-cart" style="font-size: 24px;line-height:24px;"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+                    
+        <main class="flex-fill">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-5">
+                        <form class="justify-content-center justify-content-md-start mb-3 mb-md-0">
+                            <div class="input-group input-group-sm">
+                                <input type="text" class="form-control" placeholder="Digite aqui o que procura">
+                                <button class="btn btn-danger">Buscar</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+
+                <hr>
+
+                <div class="row g-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="card text-center bg-light">
+                            <a href="#" class="position-absolute end-0 p-2 text-danger">
+                                <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
+                            </a>
+                            <a href="/produto.html">
+                                <img src="{{ url_for('static', filename='img/produtos/000001.png') }}" class="card-img-top">
+                            </a>
+                            <div class="card-header">
+                                R$ 4,50
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Banana Prata</h5>
+                                <p class="card-text truncar-3l">
+                                    Banana prata da melhor qualidade possível, direto do produtor rural para a sua mesa.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
+                                    Adicionar ao Carrinho
+                                </a>
+                                <small class="text-success">320,5kg em estoque</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="card text-center bg-light">
+                            <a href="#" class="position-absolute end-0 p-2 text-danger">
+                                <i class="bi bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
+                            </a>
+                            <img src="{{ url_for('static', filename='img/produtos/000002.jpg') }}" class="card-img-top">
+                            <div class="card-header">
+                                R$ 10,50
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Abacaxi</h5>
+                                <p class="card-text truncar-3l">
+                                    Abacaxi da melhor qualidade possível, direto do produtor rural para a sua mesa.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
+                                    Adicionar ao Carrinho
+                                </a>
+                                <small class="text-success">320,5kg em estoque</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="card text-center bg-light">
+                            <a href="#" class="position-absolute end-0 p-2 text-danger">
+                                <i class="bi bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
+                            </a>
+                            <img src="{{ url_for('static', filename='img/produtos/000003.jpg') }}" class="card-img-top">
+                            <div class="card-header">
+                                R$ 5,50
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Mamão</h5>
+                                <p class="card-text truncar-3l">
+                                    Mamao da melhor qualidade possível, direto do produtor rural para a sua mesa.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-light disabled mt-2 d-block">
+                                    <small>Reabastecendo Estoque</small>
+                                </a>
+                                <small class="text-danger">
+                                    <b>Produto Esgotado</b>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="card text-center bg-light">
+                            <a href="#" class="position-absolute end-0 p-2 text-danger">
+                                <i class="bi bi-suit-heart-fill" style="font-size: 24px; line-height: 24px;"></i>
+                            </a>
+                            <img src="{{ url_for('static', filename='img/produtos/000004.jpg') }}" class="card-img-top">
+                            <div class="card-header">
+                                R$ 4,50
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Maça</h5>
+                                <p class="card-text truncar-3l">
+                                    Maça da melhor qualidade possível, direto do produtor rural para a sua mesa.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
+                                    Adicionar ao Carrinho
+                                </a>
+                                <small class="text-success">320,5kg em estoque</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="card text-center bg-light">
+                            <a href="#" class="position-absolute end-0 p-2 text-danger">
+                                <i class="bi bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
+                            </a>
+                            <img src="{{ url_for('static', filename='img/produtos/000005.jpg') }}" class="card-img-top">
+                            <div class="card-header">
+                                R$ 6,50
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Goiaba</h5>
+                                <p class="card-text truncar-3l">
+                                    Goiaba da melhor qualidade possível, direto do produtor rural para a sua mesa.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
+                                    Adicionar ao Carrinho
+                                </a>
+                                <small class="text-success">320,5kg em estoque</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="card text-center bg-light">
+                            <a href="#" class="position-absolute end-0 p-2 text-danger">
+                                <i class="bi bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
+                            </a>
+                            <img src="{{ url_for('static', filename='img/produtos/000006.jpg') }}" class="card-img-top">
+                            <div class="card-header">
+                                R$ 8,50
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Laranja</h5>
+                                <p class="card-text truncar-3l">
+                                    Laranja da melhor qualidade possível, direto do produtor rural para a sua mesa.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
+                                    Adicionar ao Carrinho
+                                </a>
+                                <small class="text-success">320,5kg em estoque</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="card text-center bg-light">
+                            <a href="#" class="position-absolute end-0 p-2 text-danger">
+                                <i class="bi bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
+                            </a>
+                            <img src="{{ url_for('static', filename='img/produtos/000007.jpg') }}" class="card-img-top">
+                            <div class="card-header">
+                                R$ 8,50
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Abacate</h5>
+                                <p class="card-text truncar-3l">
+                                    Abacate da melhor qualidade possível, direto do produtor rural para a sua mesa.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
+                                    Adicionar ao Carrinho
+                                </a>
+                                <small class="text-success">320,5kg em estoque</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="card text-center bg-light">
+                            <a href="#" class="position-absolute end-0 p-2 text-danger">
+                                <i class="bi bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
+                            </a>
+                            <img src="{{ url_for('static', filename='img/produtos/000007.jpg') }}" class="card-img-top">
+                            <div class="card-header">
+                                R$ 8,50
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Abacate</h5>
+                                <p class="card-text truncar-3l">
+                                    Banana prata da melhor qualidade possível, direto do produtor rural para a sua mesa.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
+                                    Adicionar ao Carrinho
+                                </a>
+                                <small class="text-success">320,5kg em estoque</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="card text-center bg-light">
+                            <a href="#" class="position-absolute end-0 p-2 text-danger">
+                                <i class="bi bi-suit-heart-fill" style="font-size: 24px; line-height: 24px;"></i>
+                            </a>
+                            <img src="{{ url_for('static', filename='img/produtos/000009.jpg') }}" class="card-img-top">
+                            <div class="card-header">
+                                R$ 5,50
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Abobra</h5>
+                                <p class="card-text truncar-3l">
+                                    Abobra da melhor qualidade possível, direto do produtor rural para a sua mesa.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
+                                    Adicionar ao Carrinho
+                                </a>
+                                <small class="text-success">320,5kg em estoque</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="card text-center bg-light">
+                            <a href="#" class="position-absolute end-0 p-2 text-danger">
+                                <i class="bi bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
+                            </a>
+                            <img src="{{ url_for('static', filename='img/produtos/000010.jpg') }}" class="card-img-top">
+                            <div class="card-header">
+                                R$ 10,50
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Pepino</h5>
+                                <p class="card-text truncar-3l">
+                                    Pepino da melhor qualidade possível, direto do produtor rural para a sua mesa.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
+                                    Adicionar ao Carrinho
+                                </a>
+                                <small class="text-success">320,5kg em estoque</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="card text-center bg-light">
+                            <a href="#" class="position-absolute end-0 p-2 text-danger">
+                                <i class="bi bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
+                            </a>
+                            <img src="{{ url_for('static', filename='img/produtos/000011.jpg') }}" class="card-img-top">
+                            <div class="card-header">
+                                R$ 6,50
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Repolho</h5>
+                                <p class="card-text truncar-3l">
+                                    Repolho da melhor qualidade possível, direto do produtor rural para a sua mesa.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
+                                    Adicionar ao Carrinho
+                                </a>
+                                <small class="text-success">320,5kg em estoque</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="card text-center bg-light">
+                            <a href="#" class="position-absolute end-0 p-2 text-danger">
+                                <i class="bi bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
+                            </a>
+                            <img src="{{ url_for('static', filename='img/produtos/000012.jpg') }}" class="card-img-top">
+                            <div class="card-header">
+                                R$ 4,50
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Alho</h5>
+                                <p class="card-text truncar-3l">
+                                    Alho direto do produtor rural para a sua mesa.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
+                                    Adicionar ao Carrinho
+                                </a>
+                                <small class="text-success">320,5kg em estoque</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+               
+        </main>
+
+        <footer class="border-top text-muted bg-light">
+            <div class="container">
+                <div class="row py-3">
+                    <div class="col-12 col-md-4 text-center">
+                        &copy; 2025 - Quitanda Online MEI<br>
+                        R CARLOS MARIA STEIMBERG - 471, Vila Re/SP<br>
+                        CNPJ 60.554.411/0001-50
+                    </div>
+                    <div class="col-12 col-md-4 text-center">
+                        <a href="/privacidade.html" class="text-decoration-none text-dark">Política de Privacidade</a><br>
+                        <a href="/termos.html" class="text-decoration-none text-dark">Termos de Uso</a><br>
+                        <a href="/quemsomos.html" class="text-decoration-none text-dark">Quem Somos</a><br>
+                        <a href="/trocas.html" class="text-decoration-none text-dark">Trocas e Devoluções</a>
+                    </div>
+                    <div class="col-12 col-md-4 text-center">
+                        <a href="/contato.html" class="text-decoration-none text-dark">Contato pelo Site</a><br>
+                        E-mail: <a href="mailto:email@dominio.com" class="text-decoration-none text-dark">jotave2k04@gmail.com</a>
+                        Telefone<a href="phone:85991311549" class="text-decoration-none text-dark">(11) 94773-0542</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+   
+</body>
+</html>
